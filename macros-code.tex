@@ -1,0 +1,120 @@
+%%%% NICE CODE %%%%
+\definecolor{n1_code}{HTML}{405063}
+\definecolor{props}{HTML}{db597c}
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{lg}{HTML}{DDDDDD}
+\definecolor{CC}{HTML}{666666}
+\definecolor{numbers}{HTML}{444444}
+
+\definecolor{bgreen}{HTML}{20BC5F}
+
+\lstdefinelanguage{java}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,toMatrix,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield
+    },  
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\lstdefinelanguage{python}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,toMatrix,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield,
+    }, % Jet keywords 
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\lstdefinestyle{javalang}{
+  frame=none,
+  language=java,
+  % aboveskip=3mm,
+  % belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{numbers},
+  numbersep=5pt,
+  keywordstyle=\bfseries\color{n1_code},
+  commentstyle=\color{CC},
+  stringstyle=\bfseries,
+  breaklines=false,
+  breakatwhitespace=false,
+  tabsize=2,
+  % xleftmargin=.07in,
+  xleftmargin=.0in,
+  captionpos=b,
+  keepspaces=true,
+  escapechar=|
+}
+
+
+\lstdefinestyle{pythonlang}{
+  frame=none,
+  language=python,
+  % aboveskip=3mm,
+  % belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{numbers},
+  numbersep=5pt,
+  keywordstyle=\bfseries\color{n1_code},
+  commentstyle=\color{CC},
+  stringstyle=\bfseries,
+  breaklines=false,
+  breakatwhitespace=false,
+  tabsize=2,
+  % xleftmargin=.07in,
+  xleftmargin=.0in,
+  captionpos=b,
+  keepspaces=true,
+  escapechar=|
+}
+
+\lstdefinestyle{javainline}{
+  frame=none,
+  language=java,
+  % aboveskip=3mm,
+  % belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\bfseries\color{n1_code},
+  commentstyle=\color{gray},
+  stringstyle=\bfseries,
+  breaklines=false,
+  breakatwhitespace=false,
+  tabsize=2,
+  xleftmargin=.1in,
+  captionpos=b,
+  keepspaces=true,
+  escapechar=|,
+  moredelim=**[is][\color{n1_code}]{`}{`},
+  moredelim=**[is][\color{props}]{~}{~},
+}
+%%%% NICE CODE %%%%

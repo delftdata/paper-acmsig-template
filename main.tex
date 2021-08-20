@@ -1,0 +1,111 @@
+ \documentclass[sigconf, nonacm]{acmart}
+
+\usepackage{ragged2e}
+
+\usepackage[a-3b,mathxmp]{pdfx}
+
+\usepackage{graphicx}
+\usepackage{balance}  % for  \balance command ON LAST PAGE  (only there!)
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+
+% \usepackage[para]{footmisc}
+
+\usepackage{booktabs} % formal tables
+
+\usepackage[ruled]{algorithm2e}
+
+\newcommand{\para}[1]{\vspace{1mm}\noindent\textbf{#1.}}
+
+\newcounter{AsteriosNOC}
+\stepcounter{AsteriosNOC}
+\newcommand{\asterios}[1]{\noindent\textcolor{purple}{\small \bf [Asterios\#\arabic{AsteriosNOC}\stepcounter{AsteriosNOC}: #1]}}
+
+\renewcommand{\sectionautorefname}{Section}
+\let\subsectionautorefname\sectionautorefname
+\let\subsubsectionautorefname\sectionautorefname
+
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+
+\input{macros-code}
+
+
+\begin{document}
+
+\title{Magnificent Title}
+
+\author{Author 1 \hfill Author 2 \hfill Author 3}
+
+% \vspace{3mm}
+%\authornote{Both authors contributed equally to this research.}
+\affiliation{%
+\vspace{2mm}
+  \institution{TU Delft}
+}
+
+\email{initial.lastname@tudelft.nl}
+
+
+\renewcommand{\shortauthors}{Author et al.}
+
+
+\begin{abstract}
+Amazing Abstract \cite{delite}.
+\end{abstract}
+
+
+\maketitle
+
+
+% \begin{figure}[t]
+% \begin{center}
+% \includegraphics[width=\columnwidth]{figures/stack}
+% \caption{Software Stack}
+% \label{fig:stack}
+% \vspace{-5mm}
+% \end{center}
+% \end{figure}
+
+
+
+\begin{figure}[t]
+\begin{lstlisting}[style=javalang, numbers=none, xleftmargin=0in, label={lst:wordcount}, caption={Code example: Word count.}]
+Pipeline p = Pipeline.create();
+
+p.readFrom(lineSource())
+ .flatMap(e -> traverseArray(e.
+             toLowerCase().split("\\W+")))
+ .filter(word -> !word.isEmpty())
+ .groupingKey(wholeItem())
+ .aggregate(AggregateOperations.counting())
+ .writeTo(someSink());
+\end{lstlisting}
+\vspace{-2mm}
+\end{figure}
+
+
+\section{Introduction}
+
+\section{Conclusions}
+
+\begin{acks}
+To all contributors and the vibrant community.
+\end{acks}
+
+\balance
+  
+\bibliographystyle{reference-format}
+\bibliography{references}
+  
+\end{document}
+
